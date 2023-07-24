@@ -1,4 +1,4 @@
-import { StyledOptions, StyledProps } from '@/utils/types/style.interface'
+import { StyledOptions, StyledProps } from '../../../utils/types/style.interface'
 import tw from 'tailwind-styled-components'
 
 export const HeaderLink = tw.div`
