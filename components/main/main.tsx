@@ -1,33 +1,41 @@
-import { Button } from "@components/common/button"
-import { Animation } from "./animation"
-import Link from 'next/link'
-import { Icon } from "@iconify/react"
-import { HomeProps } from "@pages/index"
+import Header from '../header/header'
+import Lottie from 'lottie-react'
+import loadingLottie from '../../asset/lottie/animation_lkbwcvfr.json'
+import { useEffect, useState ,useRef} from 'react'
 
-export const Main = ({ id }: HomeProps) => {
+const Main = () => {
+
     return (
-        <div id={id} className="flex flex-col md:flex-row items-center justify-between lg:w-3/4 mx-auto">
-            <div className="lg:flex-grow md:w-1/2 lg:ml-20 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                <h1 className="title-font sm:text-3xl text-3xl mb-4 font-medium text-gray-900 dark:text-gray-100">
-                    <p className="text-4xl block mb-2">안녕하세요</p>
-                    신입 블록체인 개발자 김주형입니다
+        <div className="mx-auto flex flex-col h-screen items-center">
+            <Header />
+            <div className='flex flex-col justify-center items-center w-1/4 h-1/4 hover:text-blue-500 transition-all duration-300'>
+                <h1 className="text-4xl font-bold text-center flex flex-col items-center">
+                    ABOUT
+                <span className='w-2/3 h-1/3 mt-2 border-b-4 border-gray-500'/>
                 </h1>
-                <p className="lg:mb-6 leading-relaxed">
-                    web3 기술, 그리고 프론트엔드와 백엔드를 포함한 <br></br>웹 개발 분야 전반에 관심이 많습니다
-                    <br></br>최근에는 NFT 마켓 플레이스를 제작 및 서비스 중입니다
-                </p>
-                <Button color="red" size="w-44">
-                    <Link href="https://roof-top.shop/">
-                        <div className="flex items-center justify-center">
-                            <Icon icon="ic:baseline-log-in" className="text-lg mr-2" />
-                            프로젝트 보러가기
-                        </div>
-                    </Link>
-                </Button>
+                
             </div>
-            <div className="lg:w-1/2">
-                <Animation />
+            <div className="w-full h-full flex items-center justify-evenly" >
+                <div className="w-3/12 h-1/2">
+                    <Lottie animationData={loadingLottie}></Lottie>
+                </div>
+                <div className="flex flex-col items-center justify-center w-4/12 h-1/2 ">
+                    <p className="text-2xl font-bold text-gray-700 mb-7">
+                        안녕하세요! 긍정적인 신입 개발자 김홍태입니다.
+                    </p>
+                    <p className="text-2xl font-bold text-gray-700 mb-7">
+                        프로그래밍에 대한 열정과 성장에 진심을 갖고 있으며,
+                    </p>
+                    <p className="text-2xl font-bold text-gray-700 mb-7">
+                        항상 새로운 기술과 트렌드에 적응을 위해 노력합니다.
+                    </p>
+                    <p className="text-2xl font-bold text-gray-700 mb-7">
+                        함께 성장하고 발전하는 기회를 기다리고 있습니다.
+                    </p>
+                </div>
             </div>
         </div>
     )
 }
+
+export default Main

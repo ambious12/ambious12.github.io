@@ -1,45 +1,49 @@
-import tw from 'tailwind-styled-components'
+import { Button, HeaderLink } from './styled/Header.styled'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { DarkModeToggle } from '@components/common/button'
-import { useScroll } from '@utils/hooks/useScroll'
-
 const Header = () => {
-    const { isScrolling } = useScroll()
+    const [isOpenModal, setIsOpenModal] = useState(false)
+    
 
-    const HeaderLink = tw.div`
-        mr-5 hover:text-red-600 dark:hover:text-yellow-400 cursor-pointer
-    `
-
-    const handleSmoothScroll = (ref: React.RefObject<HTMLElement>) => {
-        if (ref.current) {
-          ref.current.scrollIntoView({ behavior: 'smooth' });
+    const moveScroll = (category:string) => {
+        if(category === "HOME") {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+        }else if(category === "ABOUT") {
+            window.scrollTo({ top: 1000, behavior: 'smooth' })
+        }else if(category === "SKILL") {
+            window.scrollTo({ top: 1960, behavior: 'smooth' })
+        }else if(category === "PROJECT") {
+            window.scrollTo({ top: 2960, behavior: 'smooth' })
         }
-      };
-  
+    }
+    
 
     return (
         <>
-            <header className={`text-gray-600 dark:text-gray-300 body-font opacity-90 fixed top-0 left-0 right-0 z-10 ${!isScrolling ? 'bg-transparent' : 'bg-white dark:bg-gray-800'}`}>
-                <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-                    <div className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                        <Link href="#home">
-                            <HeaderLink>Home</HeaderLink>
-                        </Link>
-                        <Link href="#skills">
-                            <HeaderLink>Skills</HeaderLink>
-                        </Link>
-                        <Link href="#portfolio">
-                            <HeaderLink>Portfolio</HeaderLink>
-                        </Link>
-                        <Link href="#contact">
-                            <HeaderLink>Contact</HeaderLink>
-                        </Link>
-                        <DarkModeToggle />
+            <header>
+                {/* fixed */}
+                <div
+                    className="border-gray-200 px-4 lg:px-6 py-2.5 opacity-90 top-0 left-0 right-0 z-10"
+                >
+                    <div className="flex flex-wrap justify-around items-center mx-auto max-w-screen-xl">
+                        <div className="flex items-center">
+                            <HeaderLink onClick={()=>moveScroll("HOME")}>
+                                <span className='relative z-10'>HOME</span>
+                            </HeaderLink>
+                            <HeaderLink onClick={()=>moveScroll("ABOUT")}>
+                                <span className='relative z-10'>ABOUT</span>
+                            </HeaderLink>
+                            <HeaderLink onClick={()=>moveScroll("SKILL")}>
+                                <span className='relative z-10'>SKILL</span>
+                            </HeaderLink>
+                            <HeaderLink onClick={()=>moveScroll("PROJECT")}>
+                                <span className='relative z-10'>PROJECT</span>
+                            </HeaderLink>
+                        </div>
                     </div>
                 </div>
             </header>
         </>
     )
 }
-
-export default Header;
+export default Header
