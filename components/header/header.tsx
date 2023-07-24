@@ -13,7 +13,7 @@ const Header = () => {
         }else if(category === "SKILL") {
             window.scrollTo({ top: 1960, behavior: 'smooth' })
         }else if(category === "PROJECT") {
-            window.scrollTo({ top: 2960, behavior: 'smooth' })
+            window.scrollTo({ top: 4130, behavior: 'smooth' })
         }
     }
     
