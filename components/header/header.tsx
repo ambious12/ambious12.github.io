@@ -9,11 +9,11 @@ const Header = () => {
         if(category === "HOME") {
             window.scrollTo({ top: 0, behavior: 'smooth' })
         }else if(category === "ABOUT") {
-            window.scrollTo({ top: 1000, behavior: 'smooth' })
+            window.scrollTo({ top: 800, behavior: 'smooth' })
         }else if(category === "SKILL") {
-            window.scrollTo({ top: 1960, behavior: 'smooth' })
+            window.scrollTo({ top: 1560, behavior: 'smooth' })
         }else if(category === "PROJECT") {
-            window.scrollTo({ top: 4130, behavior: 'smooth' })
+            window.scrollTo({ top: 4000, behavior: 'smooth' })
         }
     }
     

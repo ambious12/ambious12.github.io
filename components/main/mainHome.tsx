@@ -7,7 +7,7 @@ const MainHome = () => {
 
     const onMoveBox = () => {
         setIsMoveBox(prev => !prev)
-        window.scrollTo({ top: 1000, behavior: 'smooth' });
+        window.scrollTo({ top: 800, behavior: 'smooth' });
     }
 
     return (
