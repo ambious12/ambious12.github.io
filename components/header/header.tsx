@@ -8,12 +8,12 @@ const Header = () => {
     const moveScroll = (category:string) => {
         if(category === "HOME") {
             window.scrollTo({ top: 0, behavior: 'smooth' })
-        }else if(category === "ABOUT") {
+        }else if(category === "PROJECT") {
             window.scrollTo({ top: 800, behavior: 'smooth' })
         }else if(category === "SKILL") {
-            window.scrollTo({ top: 1560, behavior: 'smooth' })
-        }else if(category === "PROJECT") {
-            window.scrollTo({ top: 4000, behavior: 'smooth' })
+            window.scrollTo({ top: 3500, behavior: 'smooth' })
+        }else if(category === "ABOUT") {
+            window.scrollTo({ top: 6350, behavior: 'smooth' })
         }
     }
     
@@ -30,14 +30,14 @@ const Header = () => {
                             <HeaderLink onClick={()=>moveScroll("HOME")}>
                                 <span className='relative z-10'>HOME</span>
                             </HeaderLink>
-                            <HeaderLink onClick={()=>moveScroll("ABOUT")}>
-                                <span className='relative z-10'>ABOUT</span>
+                            <HeaderLink onClick={()=>moveScroll("PROJECT")}>
+                                <span className='relative z-10'>PROJECT</span>
                             </HeaderLink>
                             <HeaderLink onClick={()=>moveScroll("SKILL")}>
                                 <span className='relative z-10'>SKILL</span>
                             </HeaderLink>
-                            <HeaderLink onClick={()=>moveScroll("PROJECT")}>
-                                <span className='relative z-10'>PROJECT</span>
+                            <HeaderLink onClick={()=>moveScroll("ABOUT")}>
+                                <span className='relative z-10'>ABOUT</span>
                             </HeaderLink>
                         </div>
                     </div>

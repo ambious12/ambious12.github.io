@@ -72,55 +72,61 @@ const Project = () => {
 
                 <div className="w-2/3 my-2">
                     <h1 className="text-4xl font-bold pb-3 border-b-2 border-gray-600 w-[14.5rem] mb-6 text-yellow-600">MangoMarket</h1>
-                    <h3 className="text-lg text-yellow-500 mb-5">
+                    <h3 className="text-lg text-gray-500 mb-5">
                         MangoMarket은 위치서비스를 기반으로 동네인증을 하여 동네주민들과 
                         물물교환을 하는 플랫폼입니다. 동네인증을 위해 Geolocation API와 카카오 Map Api를 사용하였습니다.
                     </h3>
                     
-                    <h3 className="text-lg text-yellow-500 mb-3">
+                    <h3 className="text-lg text-gray-500 mb-3">
                         판매자는 안쓰는 중고 물품을 , 구매자는 원하는 중고 물품을 선택하여 교환신청 할수 있습니다.
                     </h3>
 
-                    <h3 className="text-lg text-yellow-500 mb-3">
+                    <h3 className="text-lg text-gray-500 mb-3">
                         단순한 중고 물물교환 플랫폼에 만족하지 않고, 지역 주민들 간의 소통을 더욱 활발하게 만드는 것이 MangoMarket의 또다른 목표입니다. 
                         지역 단위 기반의 물물거래 서비스를 구현하여 주민들이 서로 가까운 곳에서 물물교환이 가능하도록 지원합니다.
                     </h3>
 
-                    <h3 className="text-lg text-yellow-500 mb-3">
+                    <h3 className="text-lg text-gray-500 mb-3">
                         우리는 망고와 같이 신선함과 풍요로움을 상징하는 이름으로 MangoMarket을 창조했습니다. 
                         망고는 달콤함과 향긋한 맛으로 사랑받는 과일이며, 
                         우리의 플랫폼도 사용자들에게 편안하고 즐거운 경험을 선사합니다.
                     </h3>
                     <div className='flex justify-center items-center mt-10'>
                         <button 
-                        className='bg-yellow-300 border rounded-lg w-[12rem] h-[2rem] text-white hover:text-gray-500 hover:bg-yellow-400 transition-all duration-300'
+                        className='bg-gray-400 mb-5 border rounded-lg w-[12rem] h-[2rem] text-white hover:text-gray-700 hover:bg-indigo-400 transition-all duration-300'
                         onClick={()=>clickHandler("MangoMarket")}
                         >
                             MangoMarket 바로가기
                         </button>
                     </div>
-                    <div className='flex items-center mt-10'>
-                        <h2 className="text-md w-1/4 text-yellow-500">
+                    <div className='flex w-full items-center mt-10'>
+                        <h2 className="flex-start text-base w-1/4 pl-3 text-gray-500">
                             Tech Stack
                         </h2>
-                        <div className='flex w-full justify-around'>
-                            <div className="flex w-1/6 justify-around items-center bg-yellow-300 rounded-lg">
-                                <span className="text-gray-500 hover:text-white">React</span>
+                        <div className='flex w-1/2 justify-around'>
+                            <div className="flex w-[5rem] justify-around items-center bg-gray-400 rounded-lg">
+                                <span className="text-white hover:text-indigo-500">React</span>
                             </div>
-                            <div className="flex w-1/6 justify-around items-center bg-yellow-300 rounded-lg">
-                                <span className="text-gray-500 hover:text-white">Redux</span>
-                            </div>
-                            <div className="flex w-1/6 justify-around items-center bg-yellow-300 rounded-lg">
-                                <span className="text-gray-500 hover:text-white">Node.JS</span>
-                            </div>
-                            <div className="flex w-1/6 justify-around items-center bg-yellow-300 rounded-lg">
-                                <span className="text-gray-500 hover:text-white">MySQL</span>
-                            </div>
-                            <div className="flex w-1/6 justify-around items-center bg-yellow-300 rounded-lg">
-                                <span className="text-gray-500 hover:text-white">API</span>
+                            <div className="flex w-[5rem] justify-around items-center bg-gray-400 rounded-lg">
+                                <span className="text-white hover:text-indigo-500">Redux</span>
                             </div>
                         </div>
                     </div>
+                    {/*asdasdas */}
+                    <div className='flex w-full items-center mt-7'>
+                        <div className='flex w-full justify-evenly'>
+                            <div className="flex w-[5rem] justify-around items-center bg-gray-400 rounded-lg">
+                                <span className="text-white hover:text-indigo-500">Node.JS</span>
+                            </div>
+                            <div className="flex w-[5rem] justify-around items-center bg-gray-400 rounded-lg">
+                                <span className="text-white hover:text-indigo-500">MySQL</span>
+                            </div>
+                            <div className="flex w-[5rem] justify-around items-center bg-gray-400 rounded-lg">
+                                <span className="text-white hover:text-indigo-500">API</span>
+                            </div>
+                        </div>
+                    </div>
+                    {/*asdasdas */}
                 </div>
             </div>
             <div className='w-1/2 h-[3rem] mt-5 border-t-2 border-gray-500'/>

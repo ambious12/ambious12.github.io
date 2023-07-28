@@ -10,9 +10,9 @@ const Home: NextPage = () => {
         <>
         <MainHome/>
         <RootLayout>
-            <Main />
-            <Skill/>
             <Project/>
+            <Skill/>
+            <Main />
         </RootLayout>
         </>
     )
